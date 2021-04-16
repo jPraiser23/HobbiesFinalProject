@@ -7,7 +7,7 @@ namespace HobbiesFinalProject.Models
 {
     public class VideoGame
     {
-        public int Id { get; set; }
+        public int GameId { get; set; }
         public string Title { get; set; }
         public string Publisher { get; set; }
         public string System { get; set; }
