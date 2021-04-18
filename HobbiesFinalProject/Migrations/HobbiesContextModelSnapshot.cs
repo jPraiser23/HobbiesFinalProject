@@ -57,8 +57,8 @@ namespace HobbiesFinalProject.Migrations
                         new
                         {
                             MemberId = 2,
-                            About = "Java id eu skinny coffee as, cultivar variety crema espresso aroma percolator. Galão milk, chicory turkish single shot irish fair trade saucer fair trade. Skinny fair trade, con panna id flavour ristretto aroma eu caramelization. Aromatic milk roast dripper half and half chicory id half and half organic robust crema half and half.\r\n                            Roast steamed shop sugar irish, single shot, affogato irish cultivar to go caramelization affogato. At breve, kopi-luwak iced doppio plunger pot saucer whipped. Strong body, macchiato eu cultivar whipped single shot eu black grounds latte. Roast cortado rich aroma aromatic ut percolator grounds.",
-                            City = "Cincinnati",
+                            About = "My name is Travis and I have been going to UC Clermont following the IT Program. I plan to transfer to main compus in the fall to continue my education. I curently work night shifts at Kroger and enjoy playing chess as well as many video games in my spare time.",
+                            City = "Georgetown",
                             FirstName = "Travis",
                             LastName = "Newberry",
                             State = "Ohio"
