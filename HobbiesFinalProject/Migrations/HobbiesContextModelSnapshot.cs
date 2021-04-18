@@ -14,8 +14,8 @@ namespace HobbiesFinalProject.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
+                .HasAnnotation("ProductVersion", "3.1.13")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.5")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("HobbiesFinalProject.Models.TeamMember", b =>
@@ -48,7 +48,7 @@ namespace HobbiesFinalProject.Migrations
                         new
                         {
                             MemberId = 1,
-                            About = "Java id eu skinny coffee as, cultivar variety crema espresso aroma percolator. Galão milk, chicory turkish single shot irish fair trade saucer fair trade. Skinny fair trade, con panna id flavour ristretto aroma eu caramelization. Aromatic milk roast dripper half and half chicory id half and half organic robust crema half and half.\r\n                            Roast steamed shop sugar irish, single shot, affogato irish cultivar to go caramelization affogato. At breve, kopi-luwak iced doppio plunger pot saucer whipped. Strong body, macchiato eu cultivar whipped single shot eu black grounds latte. Roast cortado rich aroma aromatic ut percolator grounds.",
+                            About = "Hi my name is Jamie Miozzi. I am from Cleveland Ohio origionally but I've spent the past three years here in Cincinnatti. I am currently a third year student at The University of Cincinnati studying IT software development.",
                             City = "Cincinnati",
                             FirstName = "Jamie",
                             LastName = "Miozzi",
@@ -66,7 +66,7 @@ namespace HobbiesFinalProject.Migrations
                         new
                         {
                             MemberId = 3,
-                            About = "Java id eu skinny coffee as, cultivar variety crema espresso aroma percolator. Galão milk, chicory turkish single shot irish fair trade saucer fair trade. Skinny fair trade, con panna id flavour ristretto aroma eu caramelization. Aromatic milk roast dripper half and half chicory id half and half organic robust crema half and half.\r\n                            Roast steamed shop sugar irish, single shot, affogato irish cultivar to go caramelization affogato. At breve, kopi-luwak iced doppio plunger pot saucer whipped. Strong body, macchiato eu cultivar whipped single shot eu black grounds latte. Roast cortado rich aroma aromatic ut percolator grounds.",
+                            About = "I am 4th year at the University of Cincinnati. I am planning to graduate next year. I am Software Development major with interests including new technology, software development, and video game development/entertainment.",
                             City = "Cincinnati",
                             FirstName = "John",
                             LastName = "Praiser",
@@ -75,7 +75,7 @@ namespace HobbiesFinalProject.Migrations
                         new
                         {
                             MemberId = 4,
-                            About = "Java id eu skinny coffee as, cultivar variety crema espresso aroma percolator. Galão milk, chicory turkish single shot irish fair trade saucer fair trade. Skinny fair trade, con panna id flavour ristretto aroma eu caramelization. Aromatic milk roast dripper half and half chicory id half and half organic robust crema half and half.\r\n                            Roast steamed shop sugar irish, single shot, affogato irish cultivar to go caramelization affogato. At breve, kopi-luwak iced doppio plunger pot saucer whipped. Strong body, macchiato eu cultivar whipped single shot eu black grounds latte. Roast cortado rich aroma aromatic ut percolator grounds.",
+                            About = "I am a 5th year senior at the University of Cincinnati. I am graduating on April 30th! I am an IT major with a focus on Networking/System Administration and Software Development. I currently work part-time for a tech company called Genuen and am transitioning to full time after graduation. I am excited to move on to the 'real world.'",
                             City = "Cincinnati",
                             FirstName = "Madison",
                             LastName = "Rosas",
@@ -84,7 +84,8 @@ namespace HobbiesFinalProject.Migrations
                         new
                         {
                             MemberId = 5,
-                            About = "I am a graduate of Sinclair Community College's Software Development program. I have spent the past 19 years \r\n                            working for Premier Health and I am hoping to start a new career soon.",
+                            About = @"I am a graduate of Sinclair Community College's Software Development program. I have spent the past 19 years 
+                            working for Premier Health and I am hoping to start a new career soon.",
                             City = "Xenia",
                             FirstName = "Jeremy",
                             LastName = "Shepherd",
