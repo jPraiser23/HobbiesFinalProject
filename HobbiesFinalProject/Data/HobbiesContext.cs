@@ -174,8 +174,7 @@ namespace HobbiesFinalProject.Data
                     LastName = "Miozzi",
                     City = "Cincinnati",
                     State = "Ohio",
-                    About = @"Java id eu skinny coffee as, cultivar variety crema espresso aroma percolator. Galão milk, chicory turkish single shot irish fair trade saucer fair trade. Skinny fair trade, con panna id flavour ristretto aroma eu caramelization. Aromatic milk roast dripper half and half chicory id half and half organic robust crema half and half.
-                            Roast steamed shop sugar irish, single shot, affogato irish cultivar to go caramelization affogato. At breve, kopi-luwak iced doppio plunger pot saucer whipped. Strong body, macchiato eu cultivar whipped single shot eu black grounds latte. Roast cortado rich aroma aromatic ut percolator grounds."
+                    About = @"Hi my name is Jamie Miozzi. I am from Cleveland Ohio origionally but I've spent the past three years here in Cincinnatti. I am currently a third year student at The University of Cincinnati studying IT software development."
                 },
                 new TeamMember
                 {
