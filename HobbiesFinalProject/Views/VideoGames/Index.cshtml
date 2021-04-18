@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<HobbiesFinalProject.Models.VideoGame>
 
 @{
-    ViewData["Title"] = "View";
+    ViewData["Title"] = "Video Games";
 }
 
-<h1>View</h1>
+<h1>Video Games</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -12,9 +12,6 @@
 <table class="table">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.GameId)
-            </th>
             <th>
                 @Html.DisplayNameFor(model => model.Title)
             </th>
@@ -31,9 +28,6 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.GameId)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.Title)
             </td>
             <td>
@@ -43,9 +37,9 @@
                 @Html.DisplayFor(modelItem => item.System)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.GameId">Edit</a> |
+                <a class="btn btn-success" asp-action="Details" asp-route-id="@item.GameId">Details</a> |
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.GameId">Delete</a>
             </td>
         </tr>
 }
