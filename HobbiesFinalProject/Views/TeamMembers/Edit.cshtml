@@ -2,11 +2,12 @@
 
 @{
     ViewData["Title"] = "Edit";
+    ViewData["Member"] = $"{Model.FirstName} {Model.LastName}";
 }
 
 <h1>Edit</h1>
 
-<h4>TeamMember</h4>
+<h4>@ViewData["Member"]</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
