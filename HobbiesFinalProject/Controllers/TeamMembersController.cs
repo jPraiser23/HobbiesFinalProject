@@ -81,6 +81,7 @@ namespace HobbiesFinalProject.Controllers
             }
 
             var teamMember = await _context.TeamMembers.FindAsync(id);
+            ViewBag.VideoGames = videoGames.List();
             if (teamMember == null)
             {
                 return NotFound();
