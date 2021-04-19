@@ -13,5 +13,7 @@ namespace HobbiesFinalProject.Models
         public string Title { get; set; }
         public string Publisher { get; set; }
         public string System { get; set; }
+
+        public ICollection<TeamMember> TeamMembers { get; set; }
     }
 }
