@@ -12,41 +12,71 @@
     <table class="table table-bordered">
         <tbody>
             <tr>
-                <td><b>
-                    @Html.DisplayNameFor(model => model.FirstName)
-                </b></td>
+                <td>
+                    <b>
+                        @Html.DisplayNameFor(model => model.FirstName)
+                    </b>
+                </td>
                 <td>
                     @Html.DisplayFor(model => model.FirstName)
                 </td>
             </tr>
             <tr>
-                <td><b>
-                    @Html.DisplayNameFor(model => model.LastName)
-                </b></td>
+                <td>
+                    <b>
+                        @Html.DisplayNameFor(model => model.LastName)
+                    </b>
+                </td>
                 <td>
                     @Html.DisplayFor(model => model.LastName)
                 </td>
             </tr>
             <tr>
-                <td><b>
-                    @Html.DisplayNameFor(model => model.City)
-                </b></td>
+                <td>
+                    <b>
+                        @Html.DisplayNameFor(model => model.City)
+                    </b>
+                </td>
                 <td>
                     @Html.DisplayFor(model => model.City)
                 </td>
             </tr>
             <tr>
-                <td><b>
-                    @Html.DisplayNameFor(model => model.State)
-                </b></td>
+                <td>
+                    <b>
+                        @Html.DisplayNameFor(model => model.State)
+                    </b>
+                </td>
                 <td>
                     @Html.DisplayFor(model => model.State)
                 </td>
             </tr>
             <tr>
-                <td><b>
-                    @Html.DisplayNameFor(model => model.About)
-                </b></td>
+                <td>
+                    <b>
+                        @Html.DisplayNameFor(model => model.About)
+                    </b>
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.About)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>
+                       Favorite Video Game
+                    </b>
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.VideoGames.Title)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>
+                        @Html.DisplayNameFor(model => model.About)
+                    </b>
+                </td>
                 <td>
                     @Html.DisplayFor(model => model.About)
                 </td>
