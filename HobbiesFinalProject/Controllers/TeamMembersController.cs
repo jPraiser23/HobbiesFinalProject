@@ -53,6 +53,7 @@ namespace HobbiesFinalProject.Controllers
         // GET: TeamMembers/Create
         public IActionResult Create()
         {
+            ViewBag.VideoGames = videoGames.List();
             return View();
         }
 
