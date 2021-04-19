@@ -22,7 +22,13 @@ namespace HobbiesFinalProject.Controllers
         // GET: TeamMembers
         public async Task<IActionResult> Index()
         {
-            return View(await _context.TeamMembers.ToListAsync());
+            var teamMembers = await _context.TeamMembers.ToListAsync();
+            foreach(TeamMember t in teamMembers)
+            {
+                t.FavoriteGame = _context.VideoGames.FirstOrDefault(vg => vg.GameId == t.GameId);
+            }
+            _context.SaveChanges();
+            return View(teamMembers);
         }
 
         // GET: TeamMembers/Details/5
@@ -35,6 +41,8 @@ namespace HobbiesFinalProject.Controllers
 
             var teamMember = await _context.TeamMembers
                 .FirstOrDefaultAsync(m => m.MemberId == id);
+            teamMember.FavoriteGame = _context.VideoGames.FirstOrDefault(vg => vg.GameId == teamMember.GameId);
+            _context.SaveChanges();
             if (teamMember == null)
             {
                 return NotFound();
@@ -46,6 +54,7 @@ namespace HobbiesFinalProject.Controllers
         // GET: TeamMembers/Create
         public IActionResult Create()
         {
+            ViewBag.VideoGames = _context.VideoGames.OrderBy(vg => vg.Title).ToList();
             return View();
         }
 
@@ -54,7 +63,7 @@ namespace HobbiesFinalProject.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MemberId,FirstName,LastName,City,State,About")] TeamMember teamMember)
+        public async Task<IActionResult> Create([Bind("MemberId,FirstName,LastName,City,State,About,GameId")] TeamMember teamMember)
         {
             if (ModelState.IsValid)
             {
@@ -74,6 +83,7 @@ namespace HobbiesFinalProject.Controllers
             }
 
             var teamMember = await _context.TeamMembers.FindAsync(id);
+            ViewBag.VideoGames = _context.VideoGames.OrderBy(vg => vg.Title).ToList();
             if (teamMember == null)
             {
                 return NotFound();
@@ -86,7 +96,7 @@ namespace HobbiesFinalProject.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("MemberId,FirstName,LastName,City,State,About")] TeamMember teamMember)
+        public async Task<IActionResult> Edit(int id, [Bind("MemberId,FirstName,LastName,City,State,About,GameId")] TeamMember teamMember)
         {
             if (id != teamMember.MemberId)
             {
