@@ -41,6 +41,7 @@ namespace HobbiesFinalProject.Controllers
                 .FirstOrDefaultAsync(m => m.MemberId == id);
             var videoGame = await _context.VideoGames
                 .FirstOrDefaultAsync(g => g.GameId == id);
+            teamMember.VideoGames = videoGame;
             if (teamMember == null)
             {
                 return NotFound();
