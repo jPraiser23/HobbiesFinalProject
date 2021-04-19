@@ -50,7 +50,7 @@ namespace HobbiesFinalProject.Models.Config
                     City = "Cincinnati",
                     State = "Ohio",
                     About = @"I am a 5th year senior at the University of Cincinnati. I am graduating on April 30th! I am an IT major with a focus on Networking/System Administration and Software Development. I currently work part-time for a tech company called Genuen and am transitioning to full time after graduation. I am excited to move on to the 'real world.'",
-                    GameId = 1
+                    GameId = 23
                 },
                 new TeamMember
                 {

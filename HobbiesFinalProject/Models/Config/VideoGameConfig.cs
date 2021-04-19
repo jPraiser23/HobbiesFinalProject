@@ -168,6 +168,13 @@ namespace HobbiesFinalProject.Models.Config
                     Publisher = "Naughty Dog",
                     System = "Playstation 4"
                 }
+                new VideoGame
+                {
+                    GameId = 2,
+                    Title = "Kingdom Hearts II",
+                    Publisher = "Square Enix",
+                    System = "Playstation"
+                }
             );
         }
     }
