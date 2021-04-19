@@ -61,7 +61,7 @@ namespace HobbiesFinalProject.Models.Config
                     State = "Ohio",
                     About = @"I am a graduate of Sinclair Community College's Software Development program. I have spent the past 19 years 
                             working for Premier Health and I am hoping to start a new career soon.",
-                    GameId = 1
+                    GameId = 22
                 }
             );
             entity

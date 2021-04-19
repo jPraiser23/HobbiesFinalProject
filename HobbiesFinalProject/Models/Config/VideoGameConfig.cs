@@ -160,6 +160,13 @@ namespace HobbiesFinalProject.Models.Config
                     Title = "Starcraft",
                     Publisher = "Blizard",
                     System = "Computer"
+                },
+                new VideoGame
+                {
+                    GameId = 22,
+                    Title = "The Last of Us: Reamstered",
+                    Publisher = "Naughty Dog",
+                    System = "Playstation 4"
                 }
             );
         }
