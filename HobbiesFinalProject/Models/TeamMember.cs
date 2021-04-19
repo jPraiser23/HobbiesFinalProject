@@ -15,5 +15,7 @@ namespace HobbiesFinalProject.Models
         public string City { get; set; }
         public string State { get; set; }
         public string About { get; set; }
+        public int GameId { get; set; }
+        public VideoGame FavoriteGame { get; set; }
     }
 }

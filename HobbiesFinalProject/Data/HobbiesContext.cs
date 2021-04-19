@@ -163,6 +163,13 @@ namespace HobbiesFinalProject.Data
                     Title = "The Legend of Zelda: Ocarina of Time",
                     Publisher = "Nintendo",
                     System = "Nintendo 64"
+                },
+                new VideoGame
+                {
+                    GameId = 21,
+                    Title = "The Last of Us: Remastered",
+                    Publisher = "Naughty Dog",
+                    System = "Playstation 4"
                 }
             );
 
@@ -174,7 +181,8 @@ namespace HobbiesFinalProject.Data
                     LastName = "Miozzi",
                     City = "Cincinnati",
                     State = "Ohio",
-                    About = @"Hi my name is Jamie Miozzi. I am from Cleveland Ohio origionally but I've spent the past three years here in Cincinnatti. I am currently a third year student at The University of Cincinnati studying IT software development."
+                    About = @"Hi my name is Jamie Miozzi. I am from Cleveland Ohio origionally but I've spent the past three years here in Cincinnatti. I am currently a third year student at The University of Cincinnati studying IT software development.",
+                    GameId = 1
                 },
                 new TeamMember
                 {
@@ -183,7 +191,8 @@ namespace HobbiesFinalProject.Data
                     LastName = "Newberry",
                     City = "Georgetown",
                     State = "Ohio",
-                    About = @"My name is Travis and I have been going to UC Clermont following the IT Program. I plan to transfer to main compus in the fall to continue my education. I curently work night shifts at Kroger and enjoy playing chess as well as many video games in my spare time."
+                    About = @"My name is Travis and I have been going to UC Clermont following the IT Program. I plan to transfer to main compus in the fall to continue my education. I curently work night shifts at Kroger and enjoy playing chess as well as many video games in my spare time.",
+                    GameId = 3
                 },
                 new TeamMember
                 {
@@ -192,7 +201,8 @@ namespace HobbiesFinalProject.Data
                     LastName = "Praiser",
                     City = "Cincinnati",
                     State = "Ohio",
-                    About = @"I am 4th year at the University of Cincinnati. I am planning to graduate next year. I am Software Development major with interests including new technology, software development, and video game development/entertainment."
+                    About = @"I am 4th year at the University of Cincinnati. I am planning to graduate next year. I am Software Development major with interests including new technology, software development, and video game development/entertainment.",
+                    GameId = 5
                 },
                 new TeamMember
                 {
@@ -201,7 +211,8 @@ namespace HobbiesFinalProject.Data
                     LastName = "Rosas",
                     City = "Cincinnati",
                     State = "Ohio",
-                    About = @"I am a 5th year senior at the University of Cincinnati. I am graduating on April 30th! I am an IT major with a focus on Networking/System Administration and Software Development. I currently work part-time for a tech company called Genuen and am transitioning to full time after graduation. I am excited to move on to the 'real world.'"
+                    About = @"I am a 5th year senior at the University of Cincinnati. I am graduating on April 30th! I am an IT major with a focus on Networking/System Administration and Software Development. I currently work part-time for a tech company called Genuen and am transitioning to full time after graduation. I am excited to move on to the 'real world.'",
+                    GameId = 7
                 },
                 new TeamMember
                 {
@@ -211,7 +222,9 @@ namespace HobbiesFinalProject.Data
                     City = "Xenia",
                     State = "Ohio",
                     About = @"I am a graduate of Sinclair Community College's Software Development program. I have spent the past 19 years 
-                            working for Premier Health and I am hoping to start a new career soon."
+                            working for Premier Health and I am hoping to start a new career soon.",
+                    GameId = 21
+
                 }
             );
         }
