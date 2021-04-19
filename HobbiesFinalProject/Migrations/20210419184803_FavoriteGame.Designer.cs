@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HobbiesFinalProject.Migrations
 {
     [DbContext(typeof(HobbiesContext))]
-    [Migration("20210419053507_FavoriteGame")]
+    [Migration("20210419184803_FavoriteGame")]
     partial class FavoriteGame
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -88,7 +88,7 @@ namespace HobbiesFinalProject.Migrations
                             About = "I am a 5th year senior at the University of Cincinnati. I am graduating on April 30th! I am an IT major with a focus on Networking/System Administration and Software Development. I currently work part-time for a tech company called Genuen and am transitioning to full time after graduation. I am excited to move on to the 'real world.'",
                             City = "Cincinnati",
                             FirstName = "Madison",
-                            GameId = 1,
+                            GameId = 23,
                             LastName = "Rosas",
                             State = "Ohio"
                         },
@@ -99,7 +99,7 @@ namespace HobbiesFinalProject.Migrations
                             working for Premier Health and I am hoping to start a new career soon.",
                             City = "Xenia",
                             FirstName = "Jeremy",
-                            GameId = 1,
+                            GameId = 22,
                             LastName = "Shepherd",
                             State = "Ohio"
                         });
@@ -272,6 +272,20 @@ namespace HobbiesFinalProject.Migrations
                             Publisher = "Blizard",
                             System = "Computer",
                             Title = "Starcraft"
+                        },
+                        new
+                        {
+                            GameId = 22,
+                            Publisher = "Naughty Dog",
+                            System = "Playstation 4",
+                            Title = "The Last of Us: Reamstered"
+                        },
+                        new
+                        {
+                            GameId = 23,
+                            Publisher = "Square Enix",
+                            System = "Playstation",
+                            Title = "Kingdom Hearts II"
                         });
                 });
 

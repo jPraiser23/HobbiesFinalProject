@@ -26,24 +26,15 @@ namespace HobbiesFinalProject.Migrations
                 column: "GameId",
                 value: 1);
 
-            migrationBuilder.UpdateData(
-                table: "TeamMembers",
-                keyColumn: "MemberId",
-                keyValue: 4,
-                column: "GameId",
-                value: 1);
-
-            migrationBuilder.UpdateData(
-                table: "TeamMembers",
-                keyColumn: "MemberId",
-                keyValue: 5,
-                column: "GameId",
-                value: 1);
-
             migrationBuilder.InsertData(
                 table: "VideoGames",
                 columns: new[] { "GameId", "Publisher", "System", "Title" },
-                values: new object[] { 21, "Blizard", "Computer", "Starcraft" });
+                values: new object[,]
+                {
+                    { 21, "Blizard", "Computer", "Starcraft" },
+                    { 22, "Naughty Dog", "Playstation 4", "The Last of Us: Reamstered" },
+                    { 23, "Square Enix", "Playstation", "Kingdom Hearts II" }
+                });
 
             migrationBuilder.UpdateData(
                 table: "TeamMembers",
@@ -51,6 +42,20 @@ namespace HobbiesFinalProject.Migrations
                 keyValue: 2,
                 column: "GameId",
                 value: 21);
+
+            migrationBuilder.UpdateData(
+                table: "TeamMembers",
+                keyColumn: "MemberId",
+                keyValue: 4,
+                column: "GameId",
+                value: 23);
+
+            migrationBuilder.UpdateData(
+                table: "TeamMembers",
+                keyColumn: "MemberId",
+                keyValue: 5,
+                column: "GameId",
+                value: 22);
 
             migrationBuilder.CreateIndex(
                 name: "IX_TeamMembers_GameId",
@@ -80,6 +85,16 @@ namespace HobbiesFinalProject.Migrations
                 table: "VideoGames",
                 keyColumn: "GameId",
                 keyValue: 21);
+
+            migrationBuilder.DeleteData(
+                table: "VideoGames",
+                keyColumn: "GameId",
+                keyValue: 22);
+
+            migrationBuilder.DeleteData(
+                table: "VideoGames",
+                keyColumn: "GameId",
+                keyValue: 23);
 
             migrationBuilder.DropColumn(
                 name: "GameId",

@@ -167,10 +167,10 @@ namespace HobbiesFinalProject.Models.Config
                     Title = "The Last of Us: Reamstered",
                     Publisher = "Naughty Dog",
                     System = "Playstation 4"
-                }
+                },
                 new VideoGame
                 {
-                    GameId = 2,
+                    GameId = 23,
                     Title = "Kingdom Hearts II",
                     Publisher = "Square Enix",
                     System = "Playstation"
