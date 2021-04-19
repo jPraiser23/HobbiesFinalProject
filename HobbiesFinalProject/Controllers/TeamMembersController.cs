@@ -41,6 +41,7 @@ namespace HobbiesFinalProject.Controllers
                 .FirstOrDefaultAsync(m => m.MemberId == id);
             var videoGame = await _context.VideoGames
                 .FirstOrDefaultAsync(g => g.GameId == id);
+            teamMember.VideoGames = videoGame;
             if (teamMember == null)
             {
                 return NotFound();
@@ -52,6 +53,7 @@ namespace HobbiesFinalProject.Controllers
         // GET: TeamMembers/Create
         public IActionResult Create()
         {
+            ViewBag.VideoGames = videoGames.List();
             return View();
         }
 
@@ -80,6 +82,7 @@ namespace HobbiesFinalProject.Controllers
             }
 
             var teamMember = await _context.TeamMembers.FindAsync(id);
+            ViewBag.VideoGames = videoGames.List();
             if (teamMember == null)
             {
                 return NotFound();
