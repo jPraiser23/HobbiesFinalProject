@@ -7,21 +7,25 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using HobbiesFinalProject.Data;
 using HobbiesFinalProject.Models;
+using HobbiesFinalProject.Models.Config;
 
 namespace HobbiesFinalProject.Controllers
 {
     public class TeamMembersController : Controller
     {
         private readonly HobbiesContext _context;
+        private Repository<VideoGame> videoGames { get; set; }
 
         public TeamMembersController(HobbiesContext context)
         {
+            videoGames = new Repository<VideoGame>(context);
             _context = context;
         }
 
         // GET: TeamMembers
         public async Task<IActionResult> Index()
         {
+            ViewBag.VideoGames = videoGames.List();
             return View(await _context.TeamMembers.ToListAsync());
         }
 
@@ -35,6 +39,8 @@ namespace HobbiesFinalProject.Controllers
 
             var teamMember = await _context.TeamMembers
                 .FirstOrDefaultAsync(m => m.MemberId == id);
+            var videoGame = await _context.VideoGames
+                .FirstOrDefaultAsync(g => g.GameId == id);
             if (teamMember == null)
             {
                 return NotFound();
@@ -54,7 +60,7 @@ namespace HobbiesFinalProject.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MemberId,FirstName,LastName,City,State,About")] TeamMember teamMember)
+        public async Task<IActionResult> Create([Bind("MemberId,FirstName,LastName,City,State,About,GameId")] TeamMember teamMember)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +92,7 @@ namespace HobbiesFinalProject.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("MemberId,FirstName,LastName,City,State,About")] TeamMember teamMember)
+        public async Task<IActionResult> Edit(int id, [Bind("MemberId,FirstName,LastName,City,State,About,GameId")] TeamMember teamMember)
         {
             if (id != teamMember.MemberId)
             {
